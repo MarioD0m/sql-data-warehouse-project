@@ -9,7 +9,7 @@ Script purpose:
 Warning:
   Running this script will drop the database named datawarehouse if they exist.
   All data in the database will be permanently deleted. Proceed with caution and create proper backups before running the script.
-  The script is made for PosgreSQL and run in a terminal.
+  The script was made for PosgreSQL and to run in a terminal.
 ========================================================================
 */
 
