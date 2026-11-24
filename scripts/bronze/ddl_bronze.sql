@@ -7,6 +7,7 @@ Script purpose:
   tables if they already exists.
   Run this script to re-define the DDL structure of the bronze layer 
   tables.
+  This script was made for PostgreSQL.
 ========================================================================
 */
 
