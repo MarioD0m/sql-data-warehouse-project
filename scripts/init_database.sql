@@ -10,22 +10,20 @@ Warning:
   Running this script will drop the database named datawarehouse if they exist.
   All data in the database will be permanently deleted. Proceed with caution and create proper backups before running the script.
   The script is made for PosgreSQL and run in a terminal.
+========================================================================
 */
 
 -- Connect to root directory postgres and superuser postgres
-
 \c postgres postgres
 
 -- Drop and recreate the 'datawarehouse' database using psql
-
 DROP DATABASE IF EXISTS datawarehouse WITH(FORCE);
 CREATE DATABASE datawarehouse;
 
--- Connect to the new database
+-- Connect to the new database called datawarehouse using the postgres username
 \c datawarehouse postgres
 
--- Create schemas
-
+-- Create schemas for the different layers
 CREATE SCHEMA bronze;
 CREATE SCHEMA silver;
 CREATE SCHEMA gold;
