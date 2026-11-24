@@ -12,14 +12,26 @@ Warning:
   The script is made for PosgreSQL and run in a terminal.
 */
 
--- Drop and recreate the 'Datawarehouse' database using psql
+-- Connect to root directory postgres and superuser postgres
+
+\c postgres postgres
+
+-- Drop and recreate the 'datawarehouse' database using psql
+
 DROP DATABASE IF EXISTS datawarehouse WITH(FORCE);
 CREATE DATABASE datawarehouse;
 
+-- Connect to the new database
+\c datawarehouse postgres
+
 -- Create schemas
+
 CREATE SCHEMA bronze;
 CREATE SCHEMA silver;
 CREATE SCHEMA gold;
+
+-- Check the created schemas
+\dn
 
 
 
